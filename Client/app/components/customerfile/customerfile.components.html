@@ -1,0 +1,16 @@
+<div class="task-list">
+    <div *ngFor = "let row of rows">
+        <div class="col-md-1">
+            <input type="checkbox" />
+        </div>
+        <div class="col-md-4">
+             {{row.Date}} 
+        </div>
+        <div class="col-md-4">
+            {{row.Diagnose}}
+        </div>
+        <div class="col-md-4">
+            <input type="button" value="Edit" class="btn btn-info" />
+        </div>  
+    </div>
+</div>

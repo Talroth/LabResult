@@ -4,11 +4,12 @@
     "target": "es5",
     "module": "commonjs",
     "moduleResolution": "node",
+    "watch": true,
     "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "removeComments": false,
-    "noImplicitAny": false,
-    "noStrictGenericChecks": true
+    "noImplicitAny": false
+    // "noStrictGenericChecks": true
   }
 }
