@@ -18,7 +18,10 @@ var LoadFile = (function () {
         console.log('Load file init....');
     }
     LoadFile.prototype.getFileItems = function () {
-        return this.http.get('/customerFile/1').map(function (res) { return res.json(); });
+        return this.http.get('/customerFile/').map(function (res) { return res.json(); });
+    };
+    LoadFile.prototype.getFileItem = function (id) {
+        return this.http.get('/customerFile/' + id).map(function (res) { return res.json(); });
     };
     return LoadFile;
 }());

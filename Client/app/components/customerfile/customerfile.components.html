@@ -3,14 +3,21 @@
         <div class="col-md-1">
             <input type="checkbox" />
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
              {{row.Date}} 
         </div>
         <div class="col-md-4">
             {{row.Diagnose}}
         </div>
         <div class="col-md-4">
-            <input type="button" value="Edit" class="btn btn-info" />
+            <input type="button" value="Edit" class="btn btn-info" (click)="editRow($event,row._id)"/>
         </div>  
     </div>
 </div>
+
+<div class="alert alert-warning alert-dismissible" role="alert" [ngStyle]="{'display':IsPopUpShow}">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <strong>Customer file</strong>
+   Date: {{single.Date}}
+   Diagnose: {{single.Diagnose}}
+</div> 

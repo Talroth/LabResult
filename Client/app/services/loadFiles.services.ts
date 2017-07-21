@@ -11,6 +11,10 @@ export class LoadFile {
     }
 
     getFileItems() {
-        return this.http.get('/customerFile/1').map(res => res.json());
+        return this.http.get('/customerFile/').map(res => res.json());
+    }
+
+    getFileItem(id) {
+        return this.http.get('/customerFile/' + id).map(res => res.json());
     }
 }

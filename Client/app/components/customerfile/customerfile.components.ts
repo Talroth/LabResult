@@ -9,16 +9,28 @@ import { customerFileDAO } from '../../../DAO/customerFile.DAO';
 })
 export class CustomerfileComponent { 
     rows : customerFileDAO[];
-
+    IsPopUpShow : string;
+    single: customerFileDAO;
 
     constructor(private loadFile:LoadFile) {
-    
+        this.IsPopUpShow = "none";
     }
 
      ngOnInit() {
+            this.single = {_id:"", Date: "", Diagnose: ""};
             this.loadFile.getFileItems().subscribe(file => {
                  this.rows = file;                
-                 console.log(file);
+                 console.log(file);         
              }); 
+     }
+
+     editRow(event, id) {
+         event.preventDefault();
+         this.loadFile.getFileItem(id).subscribe(file => {
+             console.log(file);
+             this.IsPopUpShow = "inherit";
+            //  this.single = {_id: file._id, Date: file.Date, Diagnose: file.Diagnose};
+             this.single = file;
+            });         
      }
 }

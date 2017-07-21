@@ -14,12 +14,24 @@ var loadFiles_services_1 = require("../../services/loadFiles.services");
 var CustomerfileComponent = (function () {
     function CustomerfileComponent(loadFile) {
         this.loadFile = loadFile;
+        this.IsPopUpShow = "none";
     }
     CustomerfileComponent.prototype.ngOnInit = function () {
         var _this = this;
+        this.single = { _id: "", Date: "", Diagnose: "" };
         this.loadFile.getFileItems().subscribe(function (file) {
             _this.rows = file;
             console.log(file);
+        });
+    };
+    CustomerfileComponent.prototype.editRow = function (event, id) {
+        var _this = this;
+        event.preventDefault();
+        this.loadFile.getFileItem(id).subscribe(function (file) {
+            console.log(file);
+            _this.IsPopUpShow = "inherit";
+            //  this.single = {_id: file._id, Date: file.Date, Diagnose: file.Diagnose};
+            _this.single = file;
         });
     };
     return CustomerfileComponent;
