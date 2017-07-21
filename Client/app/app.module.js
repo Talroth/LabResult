@@ -8,7 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
-var app_component_1 = require("./app.component");
+var app_component_1 = require("./components/app/app.component");
 var customerfile_components_1 = require("./components/customerfile/customerfile.components");
 var http_1 = require("@angular/http");
 var forms_1 = require("@angular/forms");
