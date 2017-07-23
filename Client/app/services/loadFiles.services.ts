@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Http, Headers} from '@angular/http';
-import { customerFileDAO } from '../../DAO/customerFile.DAO';
+// import { customerFileDAO } from '../../DAO/customerFile.DAO';
 import 'rxjs/add/operator/map';
 
 

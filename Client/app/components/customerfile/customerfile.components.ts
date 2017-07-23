@@ -7,6 +7,7 @@ import { customerFileDAO } from '../../../DAO/customerFile.DAO';
   selector: 'customerFile',
   templateUrl: 'customerFile.components.html'
 })
+
 export class CustomerfileComponent { 
     rows : customerFileDAO[];
     IsPopUpShow : string;
